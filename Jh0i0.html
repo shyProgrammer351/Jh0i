@@ -4,16 +4,416 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="../layout.css">
+		<script type="text/javascript" src="../functions.js"></script>
+		<script></script>
 	</head>
 	<body oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false">
 		<div id = "container">
 			<div id = "titleBox"> JAVA 프로그래밍 </div>
-			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><ul></ul><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀함수</a></li></ol></div> 
+			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀함수</a></li><ul><li><a href='../Jh0i/Jh0i1.html'>합계 Σ 계산</a></li><li><a href='../Jh0i/Jh0i2.html'>factorial 계산</a></li><li><a href='../Jh0i/Jh0i4.html'>하노이 탑</a></li></ul></ol></div> 
 			<div id = "contentBox">
-				<h3> </h3>
-<br>준비중입니다 
+				<h3>20. 재귀메서드</h3>
 
+<span style='color:red;'>재귀메서드</span> &nbsp; 메서드 내에서 자기자신을 호출하는 메서드이며, 메서드를 호출할 때마다 별도의 메모리 공간이 할당
+<br>문제를 직관적으로 해결할 수 있지만, 반복문에 비해 메모리 공간이 더 필요하고 이에 따른 속도가 저하 
+<br>예) n! = n * (n-1)! : !(factorial) 메서드에서 !(factorial) 메서드를 다시 호출, 5! = 5 * ( 4 * 3 * 2 * 1 ) = 5 * 4!
 
+<br><br><b>주의사항</b> 무한호출을 예방하기 위해서, 재귀메서드 종료 조건을 반드시 재귀메서드 호출보다 위쪽에 명시 
+<br><br>
+
+<table style='width:790px; margin:0; padding:10px; border:1px solid #bcbcbc; font-size: 14px;'>
+	<tr style='background:Silver;'>
+		<td style='width:390px;'>
+			재귀메서드 : n! = n * (n-1)! &nbsp; &nbsp; 단, n > 1, 1!=1, 0!=1
+		</td>
+		<td>
+			반복 : n! = n * (n-1) * (n-2) * ... * 3 * 2 * 1
+		</td>
+	</tr>
+	<tr>
+		<td>
+       import java.util.Scanner;
+       <br> public class Factorial
+       <br> {
+       <br> &nbsp; public static int <span style='color:red;'>factorial</span>( int num ) {
+       <br> &nbsp; &nbsp; if ( num <= 1 ) {
+       <br> &nbsp; &nbsp; &nbsp; System.out.print ( "1 = " );
+       <br> &nbsp; &nbsp; &nbsp; return 1;
+       <br> &nbsp; &nbsp; }
+       <br> &nbsp; &nbsp; else {
+       <br> &nbsp; &nbsp; &nbsp; System.out.print ( num + " * " );
+       <br> &nbsp; &nbsp; &nbsp; return num = num <span style='color:red;'>* factorial</span>( num - 1 );
+       <br> &nbsp; &nbsp;  }
+       <br> &nbsp; }
+       <br> &nbsp; public static void main( String[] args ) {
+       <br> &nbsp; &nbsp; Scanner scan = new Scanner( System.in );
+       <br> &nbsp; &nbsp; int num = 0, result = 0;
+       <br> &nbsp; &nbsp; System.out.print( "숫자를 입력하세요: " );
+       <br> &nbsp; &nbsp; num = scan.nextInt();
+       <br> &nbsp; &nbsp; System.out.print( num + "! = " );
+       <br> &nbsp; &nbsp; result = <span style='color:red;'>factorial</span>( num );
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; &nbsp; System.out.print ( result );
+       <br> &nbsp; &nbsp; scan.close();
+       <br> &nbsp; }
+       <br> }
+		</td>
+		<td>
+       import java.util.Scanner;
+       <br> public class Factorial
+       <br> {
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; 
+       <br> &nbsp; public static void main( String[] args ) {
+       <br> &nbsp; &nbsp; Scanner scan = new Scanner( System.in );
+       <br> &nbsp; &nbsp; int num = 0, factorial = 1;
+       <br> &nbsp; &nbsp; System.out.print( "숫자를 입력하세요: " );
+       <br> &nbsp; &nbsp; num = scan.nextInt();
+       <br> &nbsp; &nbsp; System.out.print( num + "! = " );
+       <br> &nbsp; &nbsp; <span style='color:red;'>for</span>( ; num > 1; num-- ) {
+       <br> &nbsp; &nbsp; &nbsp; System.out.print ( num + " * " );
+       <br> &nbsp; &nbsp; &nbsp; <span style='color:red;'>factorial *=</span> num;
+       <br> &nbsp; &nbsp; }
+       <br> &nbsp; &nbsp; System.out.print ( num + " = " + factorial );
+       <br> &nbsp; &nbsp; scan.close();
+       <br> &nbsp; }
+       <br> }
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">main()</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;color:red;"> &nbsp;&nbsp; 3 &nbsp;&nbsp; </td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">r</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">0</td> 
+   </tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+</tbody> 
+</table>
+					</td>
+					<td>
+						→ <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp;
+					</td>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">main()</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">3</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">r</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">0</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white; color:red">3</td> 
+   </tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+</tbody> 
+</table>
+					</td>
+					<td>
+						→ <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp;
+					</td>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">main()</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">3</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">r</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">0</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">3</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white; color:red">2</td> 
+   </tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+</tbody> 
+</table>
+					</td>
+					<td>
+						→ <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; 
+					</td>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">main()</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">3</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">r</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">0</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">3</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">2</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white; color:red">1</td> 
+   </tr> 
+</tbody> 
+</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">main()</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;"> &nbsp;&nbsp; 3 &nbsp;&nbsp; </td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">r</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;color:red;">6</td> 
+   </tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+</tbody> 
+</table>
+					</td>
+					<td>
+						← <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp;
+					</td>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">main()</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">3</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">r</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">0</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white; color:red">6=3*2</td> 
+   </tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+</tbody> 
+</table>
+					</td>
+					<td>
+						← <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp;
+					</td>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">main()</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">3</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">r</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">0</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">3</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; ">factorial</td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">n</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white; color:red">2=2*1</td> 
+   </tr> 
+   <tr><td>&nbsp;</td></tr> 
+   <tr><td>&nbsp;</td></tr> 
+</tbody> 
+</table>
+					</td>
+					<td>
+						← <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; 
+					</td>
+					<td>
+						&nbsp;
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table>
+				<tr>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; "> &nbsp; main() </td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">num</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;color:red;"> 3 </td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">factorial</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;color:red;">3=1*3</td> 
+   </tr> 
+</tbody> 
+</table>
+					</td>
+					<td>
+						→ 
+					</td>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; "> &nbsp; main() </td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">num</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;color:red;"> 2 </td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">factorial</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;color:red;">6=1*3*2</td> 
+   </tr> 
+</tbody> 
+</table>
+					</td>
+					<td>
+						→ 
+					</td>
+					<td>
+<table style="font-size:8pt; background:white; border:0px; border-spacing:0px; margin:0px;padding:0;"> 
+<tbody id="value_table"> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:left; border:0px solid white; background:white; "> &nbsp; </td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:0px solid white; background:white; "> &nbsp; main() </td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">num</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;color:red;"> 1 </td> 
+   </tr> 
+   <tr> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">factorial</td> 
+    <td style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:white;">6</td> 
+   </tr> 
+</tbody> 
+</table>
+					</td>
+				</tr>
+			</table>
+			<br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; 
+		</td>
+	</tr>
+</table>
+
+<br>
+<br>
 				<br><br><br><br><br><br><br><br> &nbsp; 
 			</div>
 		</div>
